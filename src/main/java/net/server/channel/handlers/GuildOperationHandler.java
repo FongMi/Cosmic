@@ -48,7 +48,7 @@ public final class GuildOperationHandler extends AbstractPacketHandler {
     private static final Logger log = LoggerFactory.getLogger(GuildOperationHandler.class);
 
     private boolean isGuildNameAcceptable(String name) {
-        return name.length() <= 20;
+        return name.length() >= 3 && name.length() <= 12;
     }
 
     @Override

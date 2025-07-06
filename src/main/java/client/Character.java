@@ -197,10 +197,6 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 public class Character extends AbstractCharacterObject {
     private static final Logger log = LoggerFactory.getLogger(Character.class);
     private static final String LEVEL_200 = "[Congrats] %s has reached Level %d! Congratulate %s on such an amazing achievement!";
-    private static final String[] BLOCKED_NAMES = {"admin", "owner", "moderator", "intern", "donor", "administrator", "FREDRICK", "help", "helper", "alert", "notice", "maplestory", "fuck", "wizet", "fucking", "negro", "fuk", "fuc", "penis", "pussy", "asshole", "gay",
-            "nigger", "homo", "suck", "cum", "shit", "shitty", "condom", "security", "official", "rape", "nigga", "sex", "tit", "boner", "orgy", "clit", "asshole", "fatass", "bitch", "support", "gamemaster", "cock", "gaay", "gm",
-            "operate", "master", "sysop", "party", "GameMaster", "community", "message", "event", "test", "meso", "Scania", "yata", "AsiaSoft", "henesys"};
-
     private int world;
     private int accountid, id, level;
     private int rank, rankMove, jobRank, jobRankMove;
@@ -978,13 +974,7 @@ public class Character extends AbstractCharacterObject {
     }
 
     public static boolean canCreateChar(String name) {
-        String lname = name.toLowerCase();
-        for (String nameTest : BLOCKED_NAMES) {
-            if (lname.contains(nameTest)) {
-                return false;
-            }
-        }
-        return getIdByName(name) < 0 && name.getBytes(CharsetConstants.CHARSET).length < 13;
+        return getIdByName(name) < 0 && name.length() > 0 && name.getBytes(CharsetConstants.CHARSET).length < 13;
     }
 
     public boolean canDoor() {
