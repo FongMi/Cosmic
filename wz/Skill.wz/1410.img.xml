@@ -899,7 +899,7 @@
         </imgdir>
         <imgdir name="20">
           <string name="hs" value="h20"/>
-          <int name="mpCon" value="13"/>
+          <int name="mpCon" value="1"/>
         </imgdir>
       </imgdir>
     </imgdir>
