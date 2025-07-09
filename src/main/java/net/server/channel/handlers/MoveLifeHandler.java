@@ -77,12 +77,8 @@ public final class MoveLifeHandler extends AbstractMovementPacketHandler {
         short pOption = p.readShort();
         p.skip(8);
 
-        if (rawActivity >= 0) {
-            rawActivity = (byte) (rawActivity & 0xFF >> 1);
-        }
-
         boolean isAttack = inRangeInclusive(rawActivity, 24, 41);
-        boolean isSkill = inRangeInclusive(rawActivity, 42, 59);
+        boolean isSkill = inRangeInclusive(rawActivity, 42, 75);
 
         int useSkillId = 0;
         int useSkillLevel = 0;
@@ -105,7 +101,7 @@ public final class MoveLifeHandler extends AbstractMovementPacketHandler {
                     }
                 }
             }
-        } else {
+        } else if (isAttack) {
             int castPos = (rawActivity - 24) / 2;
             int atkStatus = monster.canUseAttack(castPos, isSkill);
             if (atkStatus < 1) {
