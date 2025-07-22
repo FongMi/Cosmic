@@ -283,10 +283,6 @@ server:
     USE_MAKER_PERMISSIVE_ATKUP: false    #Allows players to use attack-based strengthening gems on non-weapon items.
     USE_MAKER_FEE_HEURISTICS: true      #Apply compiled values for stimulants and reagents into the Maker fee calculations (max error revolves around 50k mesos). Set false to use basic constant values instead (results are never higher than requested by the client-side).
 
-    #Custom Configuration
-    USE_ENABLE_CUSTOM_NPC_SCRIPT: false  #Enables usage of custom HeavenMS NPC scripts (Agent E, Coco, etc). Will not disable Abdula (it's actually useful for the gameplay) or quests.
-    USE_STARTER_MERGE: false            #Allows any players to use the Equipment Merge custom mechanic (as opposed to the high-level, Maker lv3 requisites).
-
     #Commands Configuration
     BLOCK_GENERATE_CASH_ITEM: false     #Prevents creation of cash items with the item/drop command.
     USE_WHOLE_SERVER_RANKING: false     #Enables a ranking pool made from every character registered on the server for the "ranks" command, instead of separated by worlds.
