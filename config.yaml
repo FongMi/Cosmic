@@ -7,7 +7,7 @@ worlds:
     server_message: 歡迎來到楓之谷！
     event_message:
     why_am_i_recommended:
-    channels: 1
+    channels: 2
     exp_rate: 2
     meso_rate: 5
     drop_rate: 5
