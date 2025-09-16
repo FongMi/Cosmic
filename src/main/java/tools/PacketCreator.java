@@ -2433,9 +2433,7 @@ public class PacketCreator {
                 p.writeShort(1); // stacksize o.o
                 p.writeShort(item.getBuyable());
             } else {
-                p.writeShort(0);
-                p.writeInt(0);
-                p.writeShort(doubleToShortBits(ii.getUnitPrice(item.getItemId())));
+                p.writeLong(Double.doubleToLongBits(ii.getUnitPrice(item.getItemId())));
                 p.writeShort(ii.getSlotMax(c, item.getItemId()));
             }
         }
