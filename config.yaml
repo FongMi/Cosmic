@@ -7,10 +7,10 @@ worlds:
     server_message: 歡迎來到楓之谷！
     event_message:
     why_am_i_recommended:
-    channels: 2
-    exp_rate: 2
-    meso_rate: 5
-    drop_rate: 5
+    channels: 1
+    exp_rate: 20
+    meso_rate: 10
+    drop_rate: 10
     boss_drop_rate: 5                       #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
     quest_rate: 5                           #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
     fishing_rate: 10                        #Multiplier for success likelihood on meso thrown during fishing.
@@ -300,7 +300,7 @@ server:
     TIMEZONE: GMT
     CHARSET: Big5                              # Is loaded first, so applies to the rest of this config. Defaults to US-ASCII if invalid or not set.
     USE_DISPLAY_NUMBERS_WITH_COMMA: true          #Enforce comma on displayed strings (use this when USE_UNITPRICE_WITH_COMMA is active and you still want to display comma-separated values).
-    USE_UNITPRICE_WITH_COMMA: true                #Set this accordingly with the layout of the unitPrices on Item.wz XML's, whether it's using commas or dots to represent fractions.
+    USE_UNITPRICE_WITH_COMMA: false                #Set this accordingly with the layout of the unitPrices on Item.wz XML's, whether it's using commas or dots to represent fractions.
     MAX_MONITORED_BUFFSTATS: 5                 #Limits accounting for "dormant" buff effects, that should take place when stronger stat buffs expires.
     MAX_AP: 32767                               #Max AP allotted on the auto-assigner.
     MAX_EVENT_LEVELS: 8                         #Event has different levels of rewarding system.
